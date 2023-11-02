@@ -250,5 +250,22 @@ namespace leetcode_playground
 
             return matches == 26;
         }
+
+        /// <summary>
+        /// 2269. Find the K-Beauty of a Number.
+        /// </summary>
+        public static int DivisorSubstrings(int num, int k)
+        {
+            var n = num.ToString();
+            var count = 0;
+
+            for (var i = k - 1; i < n.Length; i++)
+            {
+                var number = int.Parse(n.Substring(i - k + 1, k));
+                if (number != 0 && num % number == 0) count++;
+            }
+
+            return count;
+        }
     }
 }

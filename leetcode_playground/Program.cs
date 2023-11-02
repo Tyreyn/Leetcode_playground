@@ -855,7 +855,7 @@ namespace Solution
             }
             */
 
-            Console.WriteLine(Sliding_Window.FindMaxAverage(new int[] { 1, 12, -5, -6, 50, 3 }, 4));
+            Console.WriteLine(Sliding_Window.DivisorSubstrings(430043, 2));
         }
     }
 }
