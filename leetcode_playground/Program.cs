@@ -172,31 +172,7 @@ namespace Solution
             return new string(word);
         }
 
-        public static bool IsValidSudoku(char[][] board)
-        {
-            var rows = new Dictionary<int, HashSet<char>>();
-            var cols = new Dictionary<int, HashSet<char>>();
-            var squares = new Dictionary<(int, int), HashSet<char>>();
 
-            for (var r = 0; r < 9; r++)
-            {
-                rows[r] = new HashSet<char>();
-                for (var c = 0; c < 9; c++)
-                {
-                    if (!cols.ContainsKey(c)) cols[c] = new HashSet<char>();
-                    if (!squares.ContainsKey((r / 3, c / 3))) squares[(r / 3, c / 3)] = new HashSet<char>();
-
-                    if (board[r][c] != 0
-                        && (!rows[r].Add(board[r][c])
-                        || !cols[c].Add(board[r][c])
-                        || !squares[(r / 3, c / 3)].Add(board[r][c])))
-                    {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
 
         public static bool IsPalindrome(string s)
         {
@@ -228,128 +204,6 @@ namespace Solution
             return true;
         }
 
-        public static int LongestConsecutive(int[] nums)
-        {
-            if (nums.Length < 2) return nums.Length;
-
-            var set = new HashSet<int>(nums);
-            var longest = 0;
-            foreach (var n in set)
-            {
-                if (!set.Contains(n - 1))
-                {
-                    var length = 0;
-                    while (set.Contains(n + length))
-                    {
-                        length++;
-                        longest = Math.Max(longest, length);
-                    }
-                }
-            }
-
-            return longest;
-        }
-
-        public static int[] TwoSum(int[] numbers, int target)
-        {
-            int[] result;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                for (int j = i + 1; j < numbers.Length; j++)
-                {
-                    if (numbers[i] + numbers[j] == target) return new int[] { ++i, ++j };
-                }
-            }
-            return null;
-        }
-
-        public static IList<IList<int>> ThreeSum(int[] nums)
-        {
-            List<IList<int>> res = new List<IList<int>>();
-
-            int left, right;
-            Array.Sort(nums);
-            for (int i = 0; i < nums.Length; i++)
-            {
-                if (i > 0 && nums[i] == nums[i - 1]) continue;
-                left = i + 1;
-                right = nums.Length - 1;
-                while (left < right)
-                {
-                    if (nums[i] + nums[left] + nums[right] > 0)
-                    {
-                        right--;
-                    }
-                    else if (nums[i] + nums[left] + nums[right] < 0)
-                    {
-                        left++;
-                    }
-                    else
-                    {
-                        res.Add(new List<int> { nums[i], nums[left], nums[right] });
-                        left++;
-                        while (nums[left] == nums[left - 1] && left < right)
-                        {
-                            left++;
-                        }
-                    }
-                }
-            }
-            return res;
-        }
-
-        public static int MaxArea(int[] height)
-        {
-            int maxHeight = 0, result = 0;
-            int left = 0, right = height.Length - 1;
-
-            while (left < right)
-            {
-                maxHeight = height[left] > height[right] ? height[right] : height[left];
-                if (result < (right - left) * maxHeight)
-                {
-                    result = (right - left) * maxHeight;
-                }
-
-                if (height[left] < height[right])
-                {
-                    left++;
-                }
-                else
-                {
-                    right--;
-                }
-            }
-            return result;
-        }
-
-        public static int Trap(int[] height)
-        {
-            if (height is null || height.Length == 0) return 0;
-
-            int left = 0, right = height.Length - 1;
-            int leftMax = height[left], rightMax = height[right];
-            var result = 0;
-
-            while (left < right)
-            {
-                if (leftMax < rightMax)
-                {
-                    left++;
-                    leftMax = Math.Max(leftMax, height[left]);
-                    result += leftMax - height[left];
-                }
-                else
-                {
-                    right--;
-                    rightMax = Math.Max(rightMax, height[right]);
-                    result += rightMax - height[right];
-                }
-            }
-
-            return result;
-        }
-
         /// <summary>
         /// 3. Longest Substring Without Repeating Characters
         /// </summary>
@@ -374,43 +228,6 @@ namespace Solution
             }
 
             return result;
-        }
-
-        public static int EvalRPN(string[] tokens)
-        {
-            Stack<int> input = new Stack<int>();
-
-            foreach (string token in tokens)
-            {
-                int number = 0;
-                var isNumber = int.TryParse(token, out number);
-                if (isNumber)
-                {
-                    input.Push(number);
-                }
-                else
-                {
-                    int a = input.Pop();
-                    int b = input.Pop();
-                    switch (token)
-                    {
-
-                        case "*":
-                            input.Push(b * a);
-                            break;
-                        case "-":
-                            input.Push(b - a);
-                            break;
-                        case "+":
-                            input.Push(b + a);
-                            break;
-                        case "/":
-                            input.Push(b / a);
-                            break;
-                    }
-                }
-            }
-            return input.Pop();
         }
 
         public static IList<string> GenerateParenthesis(int n)
@@ -473,27 +290,7 @@ namespace Solution
             return fleet;
         }
 
-        public static int LargestRectangleArea(int[] heights)
-        {
-            Stack<(int pos, int height)> rect = new Stack<(int pos, int height)>();
-            int result = 0;
 
-            for (int i = 0; i <= heights.Length; i++)
-            {
-                var height = i < heights.Length ? heights[i] : 0;
-                while (rect.Count > 0 && rect.Peek().height > height)
-                {
-                    var curr = rect.Pop();
-                    var prevIndex = rect.Count == 0 ? -1 : rect.Peek().pos;
-                    int tempResult = curr.height * (i - prevIndex - 1);
-                    result = Math.Max(result, tempResult);
-                }
-
-                if (i < heights.Length)
-                    rect.Push((i, heights[i]));
-            }
-            return result;
-        }
         //public static int Search(int[] nums, int target)
         //{
         //    int L = 0, R = nums.Length - 1;
@@ -515,43 +312,6 @@ namespace Solution
         //    }
         //    return L;
         //}
-
-        public static bool SearchMatrix(int[][] matrix, int target)
-        {
-            int x = 0;
-            while (x <= matrix.Length - 1)
-            {
-                Console.WriteLine(matrix[x][matrix[x].Length - 1]);
-                if (matrix[x][matrix[x].Length - 1] > target
-                    && matrix[x][0] < target)
-                {
-                    int L = 0, R = matrix[x].Length - 1;
-                    while (L <= R)
-                    {
-                        int M = L + ((R - L) / 2);
-                        if (matrix[x][M] < target)
-                        {
-                            L = M + 1;
-                        }
-                        else if (matrix[x][M] > target)
-                        {
-                            R = M - 1;
-                        }
-                        else
-                        {
-                            return true;
-                        }
-                    }
-                }
-                else if ((matrix[x][matrix[x].Length - 1] == target
-                    || matrix[x][0] == target))
-                {
-                    return true;
-                }
-                x++;
-            }
-            return false;
-        }
 
         public static int MinEatingSpeed(int[] piles, int h)
         {
@@ -577,59 +337,6 @@ namespace Solution
                 }
             }
             return result;
-        }
-
-        public static int FindMin(int[] nums)
-        {
-            int L = 0, R = nums.Length - 1;
-            int result = nums[L];
-
-            while (L <= R)
-            {
-                if (nums[L] <= nums[R])
-                {
-                    return nums[L];
-                }
-
-                int M = (R + L) / 2;
-                if (nums[M] >= nums[L])
-                {
-                    L = M + 1;
-                }
-                else
-                {
-                    R = M;
-                }
-            }
-
-            return 0;
-        }
-
-        public static int Search(int[] nums, int target)
-        {
-            int L = 0, R = nums.Length - 1;
-            int result = -1;
-            while (L <= R)
-            {
-                if (nums[L] == target)
-                {
-                    return L;
-                }
-
-                int M = (R + L) / 2;
-                if (nums[M] >= nums[L])
-                {
-                    if (nums[M] > target)
-                    {
-                        L = M + 1;
-                    }
-                    else
-                    {
-                        R = M;
-                    }
-                }
-            }
-            return -1;
         }
 
         public static void ReorderList(ListNode head)
@@ -855,7 +562,7 @@ namespace Solution
             }
             */
 
-            Console.WriteLine(Sliding_Window.DivisorSubstrings(430043, 2));
+            Console.WriteLine(Arrays.MinimumSum(new int[] { 5, 4, 8, 7, 10, 2 }));
         }
     }
 }

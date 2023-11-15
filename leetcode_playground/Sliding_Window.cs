@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -266,6 +267,109 @@ namespace leetcode_playground
             }
 
             return count;
+        }
+
+        /// <summary>
+        /// 658. Find K Closest Elements.
+        /// </summary>
+        public static IList<int> FindClosestElements(int[] arr, int k, int x)
+        {
+            int left = 0; int right = arr.Length - 1;
+            while (left - right >= k)
+            {
+                if (Math.Abs(x - arr[right]) < Math.Abs(x - arr[left]))
+                {
+                    left++;
+                }
+                else
+                {
+                    right--;
+                }
+            }
+            return arr[left..k].ToList();
+        }
+
+        /// <summary>
+        /// 1004. Max Consecutive Ones III.
+        /// </summary>
+        public static int LongestOnes(int[] nums, int k)
+        {
+            int left = 0, max_cons = 0;
+
+            for (int right = 0; right < nums.Length; right++)
+            {
+                k += nums[right] == 0 ? -1 : 0;
+                if (k < 0)
+                {
+                    k += nums[left] == 0 ? 1 : 0;
+                    left++;
+                }
+                else
+                {
+                    max_cons = Math.Max(max_cons, right - left + 1);
+                }
+            }
+            return max_cons;
+        }
+
+        /// <summary>
+        /// 2379. Minimum Recolors to Get K Consecutive Black Blocks.
+        /// </summary>
+        public static int MinimumRecolors(string blocks, int k)
+        {
+            int counter = 0, minFlips = int.MaxValue, leftCursor = 0, chain = 0;
+
+            for (int rightCursor = 0; rightCursor < blocks.Length; rightCursor++)
+            {
+                counter += blocks[rightCursor] == 'W' ? 1 : 0;
+                chain++;
+
+                if (chain == k)
+                {
+                    minFlips = Math.Min(minFlips, counter);
+                    counter += blocks[leftCursor] == 'W' ? -1 : 0;
+                    leftCursor++;
+                    chain--;
+                }
+            }
+            return minFlips;
+        }
+
+        /// <summary>
+        /// 2516. Take K of Each Character From Left and Right.
+        /// </summary>
+        public static int TakeCharacters(string s, int k)
+        {
+            int a = 0, b = 0, c = 0, left = 0, right = s.Length - 1;
+            // increment 'left' pointer until we have a,b,c >= k
+            for (; left < s.Length; left++)
+            {
+                if (s[left] == 'a') a++;
+                if (s[left] == 'b') b++;
+                if (s[left] == 'c') c++;
+                if (a >= k && b >= k && c >= k) break;
+            }
+            if (a < k || b < k || c < k) return -1;
+            int res = left + 1;
+            while (left >= 0)
+            {
+                // decrement 'left' pointer one step back
+                if (s[left] == 'a') a--;
+                if (s[left] == 'b') b--;
+                if (s[left] == 'c') c--;
+                left--;
+                // and increment 'right' pointer until we have a,b,c >= k
+                while (right >= 0 && (a < k || b < k || c < k))
+                {
+                    if (s[right] == 'a') a++;
+                    if (s[right] == 'b') b++;
+                    if (s[right] == 'c') c++;
+                    right--;
+                }
+                // calculate minimun
+                res = Math.Min(res, left + s.Length - right);
+            }
+            return res;
         }
     }
 }
