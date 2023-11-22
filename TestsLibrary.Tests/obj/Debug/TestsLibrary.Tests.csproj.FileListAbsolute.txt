@@ -1,0 +1,12 @@
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\obj\Debug\TestsLibrary.Tests.csproj.AssemblyReference.cache
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\obj\Debug\TestsLibrary.Tests.csproj.CoreCompileInputs.cache
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\bin\Debug\TestsLibrary.Tests.dll
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\bin\Debug\TestsLibrary.Tests.pdb
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\bin\Debug\xunit.abstractions.dll
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\bin\Debug\xunit.core.dll
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\bin\Debug\xunit.abstractions.xml
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\bin\Debug\xunit.core.xml
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\bin\Debug\xunit.execution.desktop.xml
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\obj\Debug\TestsLibrary.Tests.csproj.CopyComplete
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\obj\Debug\TestsLibrary.Tests.dll
+C:\Users\athos\source\repos\leetcode_playground\TestsLibrary.Tests\obj\Debug\TestsLibrary.Tests.pdb

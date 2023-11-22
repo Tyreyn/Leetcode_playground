@@ -1,0 +1,5 @@
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net5.0\leetcode_playground.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net5.0\leetcode_playground.AssemblyInfoInputs.cache
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net5.0\leetcode_playground.AssemblyInfo.cs
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net5.0\leetcode_playground.csproj.CoreCompileInputs.cache
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net5.0\leetcode_playground.sourcelink.json

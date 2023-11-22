@@ -13,28 +13,32 @@ namespace leetcode_playground
         /// </summary>
         public static int Search(int[] nums, int target)
         {
-            int L = 0, R = nums.Length - 1;
-            int result = -1;
-            while (L <= R)
-            {
-                if (nums[L] == target)
-                {
-                    return L;
-                }
+            int low = 0;
+            int high = nums.Length - 1;
 
-                int M = (R + L) / 2;
-                if (nums[M] >= nums[L])
+            while (low <= high)
+            {
+                var mid = (low + high) / 2;
+
+                if (nums[mid] == target)
                 {
-                    if (nums[M] > target)
-                    {
-                        L = M + 1;
-                    }
-                    else
-                    {
-                        R = M;
-                    }
+                    return mid;
+                }
+                else if (nums[low] <= nums[mid])
+                {
+                    if (target > nums[mid] || target < nums[low])
+                        low = mid + 1;
+                    else high = mid - 1;
+                }
+                else
+                {
+                    if (target < nums[mid] || target > nums[high])
+                        high = mid - 1;
+                    else low = mid + 1;
                 }
             }
+
+
             return -1;
         }
 

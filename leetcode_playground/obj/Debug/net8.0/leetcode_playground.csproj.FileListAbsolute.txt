@@ -1,0 +1,15 @@
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\bin\Debug\net8.0\leetcode_playground.exe
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\bin\Debug\net8.0\leetcode_playground.deps.json
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\bin\Debug\net8.0\leetcode_playground.runtimeconfig.json
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\bin\Debug\net8.0\leetcode_playground.dll
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\bin\Debug\net8.0\leetcode_playground.pdb
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.AssemblyInfoInputs.cache
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.AssemblyInfo.cs
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.csproj.CoreCompileInputs.cache
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.sourcelink.json
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.dll
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\refint\leetcode_playground.dll
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.pdb
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\leetcode_playground.genruntimeconfig.cache
+C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\obj\Debug\net8.0\ref\leetcode_playground.dll
