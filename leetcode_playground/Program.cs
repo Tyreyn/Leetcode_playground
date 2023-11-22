@@ -562,7 +562,26 @@ namespace Solution
             }
             */
 
-            Console.WriteLine(Arrays.MinimumSum(new int[] { 5, 4, 8, 7, 10, 2 }));
+            int[][] testNumbers1 = new int[][]
+            {
+                new int[] { 4, 3, 2, -1 },
+                new int[] { 3, 2, 1, -1 },
+                new int[] { 1,1,-1,-2},
+                new int[] { -1, -1, -2, -3 }
+            };
+            int[][] testNumbers2 = new int[][]
+            {
+                new int[] { 3,2 },
+                new int[] { 1,0 }
+            };
+            int[][] testNumbers3 = new int[][]
+            {
+                new int[] { 3,-1,-3,-3,-3 },
+                new int[] { 2,-2,-3,-3,-3 },
+                new int[] { 1,-2,-3,-3,-3},
+                new int[] { 0, -3, -3, -3, -3 }
+            };
+            Console.WriteLine(Arrays.RemoveDuplicatesTwo(new int[] { 1, 1, 1, 1, 2, 2, 3 }));
         }
     }
 }
