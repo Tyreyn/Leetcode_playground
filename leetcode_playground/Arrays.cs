@@ -493,5 +493,77 @@ namespace leetcode_playground
             if (ans == Int32.MaxValue) ans = -1;
             return ans;
         }
+
+        /// <summary>
+        /// 88. Merge Sorted Array
+        /// </summary>
+        public static void Merge(int[] nums1, int m, int[] nums2, int n)
+        {
+            Array.Copy(nums2, 0, nums1, m, n);
+            Array.Sort(nums1);
+        }
+
+        /// <summary>
+        /// 26. Remove Duplicates from Sorted Array
+        /// </summary>
+        public static int RemoveDuplicates(int[] nums)
+        {
+            int i = 1;
+            foreach (int n in nums)
+            {
+                if (nums[i - 1] != n) nums[i++] = n;
+            }
+
+            return i;
+        }
+
+        /// <summary>
+        /// 189. Rotate Array
+        /// </summary>
+        public void Rotate(int[] nums, int k)
+        {
+            k = k % nums.Length;
+            if (nums.Length <= 1 || k == 0) return;
+            Reverse(nums, 0, nums.Length - 1 - k);
+            Reverse(nums, nums.Length - k, nums.Length - 1);
+            Reverse(nums, 0, nums.Length - 1);
+        }
+        public void Reverse(int[] nums, int start, int end)
+        {
+            for (int i = 0; i <= (end - start) / 2; i++)
+            {
+                int tmp = nums[i + start];
+                nums[i + start] = nums[end - i];
+                nums[end - i] = tmp;
+            }
+        }
+
+        /// <summary>
+        /// 80. Remove Duplicates from Sorted Array II
+        /// </summary>
+        public static int RemoveDuplicatesTwo(int[] nums)
+        {
+            int biggestPair = int.MinValue;
+            int j = 0;
+            for (int i = 2; i < nums.Length; i++)
+            {
+                if (nums[i - 1] == nums[i - 2]) biggestPair = nums[i - 1];
+                while (j + i < nums.Length && nums[j + i] <= biggestPair)
+                {
+                    j++;
+                }
+                if (j + i < nums.Length && nums[j + i] > biggestPair)
+                {
+                    int temp = nums[i];
+                    nums[i] = nums[j + i];
+                    nums[j + i] = temp;
+                }
+                else
+                {
+                    return i;
+                }
+            }
+            return nums.Length;
+        }
     }
 }
