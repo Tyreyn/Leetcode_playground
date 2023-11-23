@@ -569,5 +569,24 @@ namespace leetcode_playground
             }
             return nums.Length;
         }
+
+        /// <summary>
+        /// 392. Is Subsequence
+        /// </summary>
+        public static bool IsSubsequence(string s, string t)
+        {
+            if(s.Length > t.Length) return false;
+            if (s.Length == 0) return true;
+            int sCnt = 0;
+            foreach (char c in t)
+            {
+                if ((sCnt >= s.Length))
+                {
+                    return true;
+                }
+                if (s[sCnt] == c) sCnt++;
+            }
+            return sCnt == s.Length ? true : false;
+        }
     }
 }
