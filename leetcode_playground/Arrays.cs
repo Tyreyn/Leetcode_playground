@@ -262,7 +262,6 @@ namespace leetcode_playground
         /// </summary>
         public static int[] TwoSum2(int[] numbers, int target)
         {
-            int[] result;
             for (int i = 0; i < numbers.Length; i++)
             {
                 for (int j = i + 1; j < numbers.Length; j++)

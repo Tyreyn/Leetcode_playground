@@ -1,0 +1,15 @@
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\bin\Release\net8.0\leetcode_playground.exe
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\bin\Release\net8.0\leetcode_playground.deps.json
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\bin\Release\net8.0\leetcode_playground.runtimeconfig.json
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\bin\Release\net8.0\leetcode_playground.dll
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\bin\Release\net8.0\leetcode_playground.pdb
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.AssemblyInfoInputs.cache
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.AssemblyInfo.cs
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.csproj.CoreCompileInputs.cache
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.sourcelink.json
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.dll
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\refint\leetcode_playground.dll
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.pdb
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\leetcode_playground.genruntimeconfig.cache
+C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\obj\Release\net8.0\ref\leetcode_playground.dll
