@@ -12,16 +12,32 @@ namespace leetcode_playground
         {
             if (magazine.Length < ransomNote.Length) return false;
             Dictionary<char, int> magazineDict = new Dictionary<char, int>();
-            Dictionary<char, int> ransomNoteDict = new Dictionary<char, int>();
             for (int i = 0; i < magazine.Length; i++)
             {
-                magazineDict[magazine[i]]++;
-                ransomNoteDict[ransomNote[i]]++;
+                if (!magazineDict.ContainsKey(magazine[i]))
+                {
+                    magazineDict.Add(magazine[i], 1);
+                }
+                else
+                {
+                    magazineDict[magazine[i]]++;
+                }
             }
 
-            foreach(KeyValuePair<char, int> keyValuePair in ransomNoteDict)
+            foreach(char c in ransomNote)
             {
-                if(keyValuePair.Value > magazineDict[keyValuePair.Key])
+                if (magazineDict.ContainsKey(c))
+                {
+                    if (magazineDict[c] > 0)
+                    {
+                        magazineDict[c]--;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
                 {
                     return false;
                 }
