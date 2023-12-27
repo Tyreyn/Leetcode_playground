@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JBNNRMD656S3h8hQeRF4xezv6huTxzex8D1TGslLMFH7p1ZefV+kEuudFhd3hSHi8sBoryztZvGA2zwSycmUBw==",
+  "dgSpecHash": "qIAHOtfRI0etizGm1I8zzDGB9g/PRIBPjjNZS79xab1YxpNUPOc7V300uHOimGq7MchOVuUGdRu1b0wV+fC/RQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
+  "projectFilePath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\athos\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\athos\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
