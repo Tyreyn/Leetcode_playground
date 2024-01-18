@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj": {}
+    "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj": {
+    "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
+        "projectUniqueName": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
         "projectName": "LeetCodeTests",
-        "projectPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
+        "projectPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
         "packagesPath": "C:\\Users\\athos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\obj\\",
+        "outputPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\athos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj": {
-                "projectPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj"
+              "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj": {
+                "projectPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj"
               }
             }
           }
@@ -85,17 +89,21 @@
         }
       }
     },
-    "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj": {
+    "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
+        "projectUniqueName": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
         "projectName": "leetcode_playground",
-        "projectPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
+        "projectPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
         "packagesPath": "C:\\Users\\athos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\obj\\",
+        "outputPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\athos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

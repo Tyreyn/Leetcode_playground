@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\athos\\.nuget\\packages\\": {}
+    "C:\\Users\\athos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
+      "projectUniqueName": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
       "projectName": "leetcode_playground",
-      "projectPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
+      "projectPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj",
       "packagesPath": "C:\\Users\\athos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\obj\\",
+      "outputPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\athos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
