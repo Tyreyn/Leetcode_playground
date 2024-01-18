@@ -5527,19 +5527,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\athos\\.nuget\\packages\\": {}
+    "C:\\Users\\athos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
+      "projectUniqueName": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
       "projectName": "LeetCodeTests",
-      "projectPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
+      "projectPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\LeetCodeTests.csproj",
       "packagesPath": "C:\\Users\\athos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\LeetCodeTests\\obj\\",
+      "outputPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\LeetCodeTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\athos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5553,8 +5558,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj": {
-              "projectPath": "C:\\Users\\athos\\Documents\\Visual Studio 2022\\Leetcode_playground\\leetcode_playground\\leetcode_playground.csproj"
+            "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj": {
+              "projectPath": "C:\\Users\\athos\\source\\repos\\leetcode_playground\\leetcode_playground\\leetcode_playground.csproj"
             }
           }
         }

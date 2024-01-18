@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = leetcode_playground
-build_property.ProjectDir = C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\leetcode_playground\
+build_property.ProjectDir = C:\Users\athos\source\repos\leetcode_playground\leetcode_playground\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

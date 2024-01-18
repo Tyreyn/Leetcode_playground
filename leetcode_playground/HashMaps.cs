@@ -24,7 +24,7 @@ namespace leetcode_playground
                 }
             }
 
-            foreach(char c in ransomNote)
+            foreach (char c in ransomNote)
             {
                 if (magazineDict.ContainsKey(c))
                 {
@@ -43,6 +43,51 @@ namespace leetcode_playground
                 }
             }
 
+            return true;
+        }
+
+        public static bool IsIsomorphic(string s, string t)
+        {
+            if (s.Length != t.Length) return false;
+            Dictionary<char, char> isoDict = new Dictionary<char, char>();
+            for (int index = 0; index < s.Length; index++)
+            {
+                if (!isoDict.ContainsKey(s[index]))
+                {
+                    if (isoDict.ContainsValue(t[index]))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        isoDict.Add(s[index], t[index]);
+                    }
+                }
+                else if (isoDict[s[index]] != t[index])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool WordPattern(string pattern, string s)
+        {
+            string[] words = s.Split(' ');
+            if (pattern.Length != words.Count()) return false;
+            Dictionary<char, string> wordDictionary = new Dictionary<char, string>();
+            for (int index = 0; index < words.Length; index++)
+            {
+                if (!wordDictionary.ContainsKey(pattern[index]))
+                {
+                    if (wordDictionary.ContainsValue(words[index])) return false;
+                    wordDictionary.Add(pattern[index], words[index]);
+                }
+                else if (wordDictionary[pattern[index]] != words[index])
+                {
+                    return false;
+                }
+            }
             return true;
         }
     }
