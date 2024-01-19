@@ -1,9 +1,4 @@
 ﻿using leetcode_playground;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCodeTests
 {
@@ -43,5 +38,35 @@ namespace LeetCodeTests
             string message = string.Format($"InputData: {string.Join(", ", pattern)}, Target: {s}, ExpectedResult: {expectedResult}");
             Assert.Equal(HashMaps.WordPattern(pattern, s), expectedResult);
         }
+
+        [Theory]
+        [InlineData("anagram", "nagaram", true)]
+        [InlineData("rat", "car", false)]
+        [InlineData("raat", "car", false)]
+        [InlineData("anal", "lana", true)]
+        public void isAnagram(string pattern, string s, bool expectedResult)
+        {
+            string message = string.Format($"InputData: {string.Join(", ", pattern)}, Target: {s}, ExpectedResult: {expectedResult}");
+            Assert.Equal(HashMaps.IsAnagram(pattern, s), expectedResult);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 2, 7, 11, 15 }, 9, new int[] { 0, 1 })]
+        [InlineData(new int[] { 3, 2, 4 }, 6, new int[] { 1, 2 })]
+        [InlineData(new int[] { 3, 3 }, 6, new int[] { 0, 1 })]
+        public void twoSum(int[] nums, int target, int[] expectedResult)
+        {
+            string message = string.Format($"InputData: {string.Join(", ", nums)}, Target: {target}, ExpectedResult: {string.Join(",", expectedResult)}");
+            Assert.Equal(HashMaps.TwoSum(nums, target), expectedResult);
+        }
+
+        [Theory]
+        [MemberData(nameof(HashMapTestData.TD_GroupAnagrams), MemberType = typeof(HashMapTestData))]
+        public void groupAnagrams(string[] nums, List<List<string>> expectedResult)
+        {
+            string message = string.Format($"InputData: {string.Join(", ", nums)}, ExpectedResult: {string.Join(",", expectedResult)}");
+            Assert.Equal(expectedResult, HashMaps.GroupAnagrams(nums));
+        }
+
     }
 }
