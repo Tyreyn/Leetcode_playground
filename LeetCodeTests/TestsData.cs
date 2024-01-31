@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LeetCodeTests
 {
-    public static class HashMapTestData
+    public static class TestsData
     {
         public static IEnumerable<object[]> TD_GroupAnagrams()
         {
@@ -40,6 +40,47 @@ namespace LeetCodeTests
             {
                 null,
                 null,
+            };
+        }
+
+        public static IEnumerable<object[]> TD_SummaryRanges()
+        {
+            yield return new object[]
+            {
+                new int[] { 0,1,2,4,5,7 },
+                new List<string>
+                {
+                    "0->2",
+                    "4->5",
+                    "7"
+                },
+            };
+            yield return new object[]
+            {
+                new int[] { 0,2,3,4,6,8,9 },
+                new List<string>
+                {
+                    "0",
+                    "2->4",
+                    "6",
+                    "8->9"
+                },
+            };
+            yield return new object[]
+            {
+                new int[] {},
+                new List<string>
+                {
+                },
+            };
+            yield return new object[]
+            {
+                new int[] {-2147483648,-2147483647,2147483647},
+                new List<string>
+                {
+                    "-2147483648->-2147483647",
+                    "2147483647"
+                },
             };
         }
     }

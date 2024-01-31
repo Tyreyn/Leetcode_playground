@@ -140,7 +140,7 @@ namespace leetcode_playground
 
         public static IList<IList<string>> GroupAnagrams(string[] strs)
         {
-            var dict = new Dictionary<string, IList<string>>();
+            Dictionary<string, IList<string>> dict = new Dictionary<string, IList<string>>();
 
             for (int i = 0; i < strs.Length; i++)
             {
@@ -160,5 +160,50 @@ namespace leetcode_playground
 
             return dict.Values.ToList();
         }
+
+        public static bool ContainsNearbyDuplicate(int[] nums, int k)
+        {
+            HashSet<int> numIndices = new HashSet<int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (numIndices.Contains(nums[i]))
+                {
+                    return true;
+                }
+
+                numIndices.Add(nums[i]);
+
+                if (numIndices.Count > k)
+                {
+                    numIndices.Remove(nums[i - k]);
+                }
+            }
+
+            return false;
+        }
+
+        public static int LongestConsecutive(int[] nums)
+        {
+            if (nums.Length < 2) return nums.Length;
+
+            var set = new HashSet<int>(nums);
+            var longest = 0;
+            foreach (var n in set)
+            {
+                if (!set.Contains(n - 1))
+                {
+                    var length = 0;
+                    while (set.Contains(n + length))
+                    {
+                        length++;
+                        longest = Math.Max(longest, length);
+                    }
+                }
+            }
+
+            return longest;
+        }
+
     }
 }

@@ -9,6 +9,7 @@
       "LeetCodeTests/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.8.0",
+          "Xunit.SkippableFact": "1.4.13",
           "coverlet.collector": "6.0.0",
           "leetcode_playground": "1.0.0",
           "xunit": "2.4.2",
@@ -963,6 +964,14 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "Validation/2.4.18": {
+        "runtime": {
+          "lib/netstandard1.3/Validation.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.18.58985"
+          }
+        }
+      },
       "xunit/2.4.2": {
         "dependencies": {
           "xunit.analyzers": "1.0.0",
@@ -1021,6 +1030,18 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
+      "Xunit.SkippableFact/1.4.13": {
+        "dependencies": {
+          "Validation": "2.4.18",
+          "xunit.extensibility.execution": "2.4.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xunit.SkippableFact.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.13.615"
+          }
+        }
+      },
       "leetcode_playground/1.0.0": {
         "runtime": {
           "leetcode_playground.dll": {}
@@ -1601,6 +1622,13 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
+    "Validation/2.4.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NfvWJ1QeuZ1FQCkqgXTu1cOkRkbNCfxs4Tat+abXLwom6OXbULVhRGp34BTvVB4XPxj6VIAl7KfLfStXMt/Ehw==",
+      "path": "validation/2.4.18",
+      "hashPath": "validation.2.4.18.nupkg.sha512"
+    },
     "xunit/2.4.2": {
       "type": "package",
       "serviceable": true,
@@ -1656,6 +1684,13 @@
       "sha512": "sha512-OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    },
+    "Xunit.SkippableFact/1.4.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IyzZNvJEtXGlXrzxDiSbtH5Lyxf4iJdRQADuyjGdDf00LjXRLJwIoezQNFhFGKTMtvk8IIgaSHxW4mAV4O7b8A==",
+      "path": "xunit.skippablefact/1.4.13",
+      "hashPath": "xunit.skippablefact.1.4.13.nupkg.sha512"
     },
     "leetcode_playground/1.0.0": {
       "type": "project",

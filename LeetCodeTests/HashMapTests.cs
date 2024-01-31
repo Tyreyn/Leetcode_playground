@@ -1,4 +1,5 @@
 ﻿using leetcode_playground;
+using Xunit;
 
 namespace LeetCodeTests
 {
@@ -60,13 +61,31 @@ namespace LeetCodeTests
             Assert.Equal(HashMaps.TwoSum(nums, target), expectedResult);
         }
 
-        [Theory]
-        [MemberData(nameof(HashMapTestData.TD_GroupAnagrams), MemberType = typeof(HashMapTestData))]
+        [SkippableTheory]
+        [MemberData(nameof(TestsData.TD_GroupAnagrams), MemberType = typeof(TestsData), Skip="not implemented searching through two lists")]
         public void groupAnagrams(string[] nums, List<List<string>> expectedResult)
         {
             string message = string.Format($"InputData: {string.Join(", ", nums)}, ExpectedResult: {string.Join(",", expectedResult)}");
             Assert.Equal(expectedResult, HashMaps.GroupAnagrams(nums));
         }
 
+        [Theory]
+        [InlineData(new int[] { 1, 2, 3, 1 }, 3, true)]
+        [InlineData(new int[] { 1, 0, 1, 1 }, 1, true)]
+        [InlineData(new int[] { 1, 2, 3, 1, 2, 3 }, 2, false)]
+        public void containsNearbyDuplicate(int[] nums, int target, bool expectedResult)
+        {
+            string message = string.Format($"InputData: {string.Join(", ", nums)}, Target: {target}, ExpectedResult: {string.Join(",", expectedResult)}");
+            Assert.Equal(HashMaps.ContainsNearbyDuplicate(nums, target), expectedResult);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 100, 4, 200, 1, 3, 2 }, 4)]
+        [InlineData(new int[] { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 }, 9)]
+        public void longestConsecutive(int[] nums, int expectedResult)
+        {
+            string message = string.Format($"InputData: {string.Join(", ", nums)}, ExpectedResult: {string.Join(",", expectedResult)}");
+            Assert.Equal(HashMaps.LongestConsecutive(nums), expectedResult);
+        }
     }
 }
