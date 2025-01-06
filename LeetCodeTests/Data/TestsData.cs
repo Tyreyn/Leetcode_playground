@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeTests
+namespace LeetCodeTests.Data
 {
     public static class TestsData
     {

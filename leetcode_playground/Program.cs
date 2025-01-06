@@ -1,99 +1,8 @@
 ﻿using leetcode_playground;
+using leetcode_playground.HelperClasses;
 
 namespace Solution
 {
-    public class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-        {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-    public class Node
-    {
-        public int val;
-        public Node next;
-        public Node random;
-
-        public Node(int _val)
-        {
-            val = _val;
-            next = null;
-            random = null;
-        }
-    }
-    public class KthLargest
-    {
-        PriorityQueue<int, int> data = new PriorityQueue<int, int>();
-        int k;
-
-        public KthLargest(int k, int[] nums)
-        {
-            this.k = k;
-            foreach (var num in nums)
-                Add(num);
-        }
-
-        public int Add(int val)
-        {
-            data.Enqueue(val, val);
-
-            if (data.Count > k)
-                data.Dequeue();
-
-            return data.Peek();
-        }
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-    public class MinStack
-    {
-        private Stack<int> stack = new Stack<int>();
-        private Stack<int> minStack = new Stack<int>();
-        public MinStack()
-        {
-            stack = new Stack<int>();
-            minStack = new Stack<int>();
-        }
-
-        public void Push(int val)
-        {
-            stack.Push(val);
-            int min = Math.Min(val, minStack.Count != 0 ? minStack.Peek() : val);
-            minStack.Push(min);
-        }
-
-        public void Pop()
-        {
-            minStack.Pop();
-            stack.Pop();
-        }
-
-        public int Top()
-        {
-            return stack.Peek();
-        }
-
-        public int GetMin()
-        {
-            return minStack.Peek();
-        }
-    }
-
 
     public static class Solution
     {
@@ -289,29 +198,6 @@ namespace Solution
             }
             return fleet;
         }
-
-
-        //public static int Search(int[] nums, int target)
-        //{
-        //    int L = 0, R = nums.Length - 1;
-        //    while (L <= R)
-        //    {
-        //        int M = L + ((R - L) / 2);
-        //        if (nums[M] < target)
-        //        {
-        //            L = M;
-        //        }
-        //        else if (nums[M] > target)
-        //        {
-        //            R = M;
-        //        }
-        //        else
-        //        {
-        //            return M;
-        //        }
-        //    }
-        //    return L;
-        //}
 
         public static int MinEatingSpeed(int[] piles, int h)
         {
@@ -513,54 +399,6 @@ namespace Solution
 
         public static void Main()
         {
-            /*
-            char[][] board = new char[][]
-            {new  char[]{ '5', '3', '.', '.', '7', '.', '.', '.', '.' }
-            ,new  char[]{'6', '.', '.', '1', '9', '5', '.', '.', '.'}
-            ,new  char[]{'.', '9', '8', '.', '.', '.', '.', '6', '.'}
-            ,new  char[]{'8', '.', '.', '.', '6', '.', '.', '.', '3'}
-            ,new  char[]{'4', '.', '.', '8', '.', '3', '.', '.', '1'}
-            ,new  char[]{'7', '.', '.', '.', '2', '.', '.', '.', '6'}
-            ,new  char[]{'.', '6', '.', '.', '.', '.', '2', '8', '.'}
-            ,new  char[]{'.', '.', '.', '4', '1', '9', '.', '.', '5'}
-            ,new  char[]{'.', '.', '.', '.', '8', '.', '.', '7', '9'} };
-
-            int[][] matrix = new int[][]
-            {
-                new int[] {1,3,5,7,},
-                new int[] {10,11,16,20},
-                new int[] {23,30,34,60}
-            };
-
-            ListNode l1 = new ListNode(1, null);
-            l1.next = new ListNode(2, null);
-            l1.next.next = new ListNode(3, null);
-            l1.next.next.next = new ListNode(4, null);
-            l1.next.next.next.next = new ListNode(5, null);
-            ListNode l2 = new ListNode(1, null);
-            l2.next = new ListNode(2, null);
-            l2.next.next = new ListNode(3, null);
-            l2.next.next.next = new ListNode(4, null);
-            l2.next.next.next.next = new ListNode(5, null);
-
-            TreeNode root = new TreeNode(
-                3,
-                new TreeNode(9),
-                new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-
-            KthLargest kthLargest = new KthLargest(3, new int[] { 4, 5, 8, 2 });
-            kthLargest.Add(3);   // return 4
-            kthLargest.Add(5);   // return 5
-            kthLargest.Add(10);  // return 5
-            kthLargest.Add(9);   // return 8
-            kthLargest.Add(4);   // return 8
-
-            var result = CountBits(4);
-            foreach (var res in result)
-            {
-                Console.WriteLine(res);
-            }
-            */
 
             int[][] testNumbers1 = new int[][]
             {
