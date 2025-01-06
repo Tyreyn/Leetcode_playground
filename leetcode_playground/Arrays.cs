@@ -397,6 +397,114 @@ namespace leetcode_playground
         }
 
         /// <summary>
+        /// 122. Best Time to Buy and Sell Stock II
+        /// </summary>
+        public static int MaxProfit2(int[] prices)
+        {
+            int max = 0;
+            int start = prices[0];
+            int len = prices.Length;
+            for (int i = 1; i < len; i++)
+            {
+                if (start < prices[i])
+                {
+                    max += prices[i] - start;
+                }
+                start = prices[i];
+            }
+            return max;
+        }
+
+        /// <summary>
+        /// 55. Jump Game
+        /// </summary>
+        public static bool CanJump(int[] nums)
+        {
+            int nearestJump = nums.Length - 1;
+            for(int i = nums.Length - 2; i >= 0; i--)
+            {
+                if(i + nums[i] >= nearestJump)
+                {
+                    nearestJump = i;
+                }
+            }
+            return nearestJump == 0;
+        }
+
+        /// <summary>
+        /// 45. Jump Game II
+        /// </summary>
+        public static int Jump(int[] nums)
+        {
+            int jumps = 0, farthest = 0, end = 0;
+
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                farthest = Math.Max(farthest, i + nums[i]);
+                if (i == end)
+                {
+                    jumps++;
+                    end = farthest;
+                }
+            }
+
+            return jumps;
+        }
+
+        /// <summary>
+        /// 274. H-Index
+        /// </summary>
+        public static int HIndex(int[] citations)
+        {
+
+            int n = citations.Length;
+            int[] buckets = new int[n + 1];
+            foreach (int c in citations)
+            {
+                if (c >= n)
+                {
+                    buckets[n]++;
+                }
+                else
+                {
+                    buckets[c]++;
+                }
+            }
+            int count = 0;
+            for (int i = n; i >= 0; i--)
+            {
+                count += buckets[i];
+                if (count >= i) return i;
+            }
+            return 0;
+
+            //int hIndex = 0;
+            //if(citations.Length == 1) {
+            //    return citations[0] > 0 ? 1 : 0;
+            //}
+
+            //for(int i = 0; i < citations.Length;i++)
+            //{
+            //    int cnt = 0;
+            //    for (int j = 0; j < citations.Length; j++)
+            //    {
+            //        if (citations[i] <= citations[j])
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    if (cnt >= citations[i] && hIndex < citations[i])
+            //    {
+            //        hIndex = citations[i];
+            //    }else if (cnt <= citations[i] && hIndex < cnt)
+            //    {
+            //        hIndex = cnt;
+            //    }
+            //}
+            //return hIndex;
+        }
+
+        /// <summary>
         /// 35. Search Insert Position
         /// </summary>
         public static int SearchInsert(int[] nums, int target)
