@@ -1,4 +1,5 @@
-﻿using System;
+﻿using leetcode_playground.Helpers.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -397,6 +398,114 @@ namespace leetcode_playground
         }
 
         /// <summary>
+        /// 122. Best Time to Buy and Sell Stock II
+        /// </summary>
+        public static int MaxProfit2(int[] prices)
+        {
+            int max = 0;
+            int start = prices[0];
+            int len = prices.Length;
+            for (int i = 1; i < len; i++)
+            {
+                if (start < prices[i])
+                {
+                    max += prices[i] - start;
+                }
+                start = prices[i];
+            }
+            return max;
+        }
+
+        /// <summary>
+        /// 55. Jump Game
+        /// </summary>
+        public static bool CanJump(int[] nums)
+        {
+            int nearestJump = nums.Length - 1;
+            for (int i = nums.Length - 2; i >= 0; i--)
+            {
+                if (i + nums[i] >= nearestJump)
+                {
+                    nearestJump = i;
+                }
+            }
+            return nearestJump == 0;
+        }
+
+        /// <summary>
+        /// 45. Jump Game II
+        /// </summary>
+        public static int Jump(int[] nums)
+        {
+            int jumps = 0, farthest = 0, end = 0;
+
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                farthest = Math.Max(farthest, i + nums[i]);
+                if (i == end)
+                {
+                    jumps++;
+                    end = farthest;
+                }
+            }
+
+            return jumps;
+        }
+
+        /// <summary>
+        /// 274. H-Index
+        /// </summary>
+        public static int HIndex(int[] citations)
+        {
+
+            int n = citations.Length;
+            int[] buckets = new int[n + 1];
+            foreach (int c in citations)
+            {
+                if (c >= n)
+                {
+                    buckets[n]++;
+                }
+                else
+                {
+                    buckets[c]++;
+                }
+            }
+            int count = 0;
+            for (int i = n; i >= 0; i--)
+            {
+                count += buckets[i];
+                if (count >= i) return i;
+            }
+            return 0;
+
+            //int hIndex = 0;
+            //if(citations.Length == 1) {
+            //    return citations[0] > 0 ? 1 : 0;
+            //}
+
+            //for(int i = 0; i < citations.Length;i++)
+            //{
+            //    int cnt = 0;
+            //    for (int j = 0; j < citations.Length; j++)
+            //    {
+            //        if (citations[i] <= citations[j])
+            //        {
+            //            cnt++;
+            //        }
+            //    }
+            //    if (cnt >= citations[i] && hIndex < citations[i])
+            //    {
+            //        hIndex = citations[i];
+            //    }else if (cnt <= citations[i] && hIndex < cnt)
+            //    {
+            //        hIndex = cnt;
+            //    }
+            //}
+            //return hIndex;
+        }
+
+        /// <summary>
         /// 35. Search Insert Position
         /// </summary>
         public static int SearchInsert(int[] nums, int target)
@@ -409,6 +518,193 @@ namespace leetcode_playground
                 index++;
             }
             return index;
+        }
+
+        /// <summary>
+        /// 13. Roman to Integer
+        /// </summary>
+        public static int RomanToInt(string s)
+        {
+            int result = 0, sLength = s.Length;
+            for (int i = 1; i <= sLength; i++)
+            {
+                int firstNumber = RomanNumerals.RomanToNumerals[s[i - 1]];
+                int secondNumber = i < sLength ? RomanNumerals.RomanToNumerals[s[i]] : 0;
+                if (firstNumber < secondNumber)
+                {
+                    result += secondNumber - firstNumber;
+                    i++;
+                }
+                else
+                {
+                    result += firstNumber;
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 12. Integer to Roman
+        /// </summary>
+        public static string IntToRoman(int num)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            while (num > 0)
+            {
+                foreach (KeyValuePair<string, int> keyValuePair in RomanNumerals.NumeralsToRoman)
+                {
+                    if (num >= keyValuePair.Value)
+                    {
+                        num -= keyValuePair.Value;
+                        stringBuilder.Append(keyValuePair.Key);
+                        break;
+                    }
+                }
+            }
+            return stringBuilder.ToString();
+        }
+
+        /// <summary>
+        /// 58. Length of Last Word
+        /// </summary>
+        public static int LengthOfLastWord(string s)
+        {
+            string[] words = s.Split(' ').Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            int length = words.Length;
+            int result = 0;
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
+            }
+            foreach (char c in words[length - 1])
+            {
+                result++;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 134. Gas Station
+        /// </summary>
+        public static int CanCompleteCircuit(int[] gas, int[] cost)
+        {
+            if (gas.Sum() < cost.Sum()) return -1;
+
+            int total = 0;
+            int startIndex = 0;
+            for (int index = 0; index < gas.Length; index++)
+            {
+                total += (gas[index] - cost[index]);
+
+                if (total < 0)
+                {
+                    total = 0;
+                    startIndex = index + 1;
+                }
+            }
+
+            return startIndex;
+        }
+
+        /// <summary>
+        /// 151. Reverse Words in a String
+        /// </summary>
+        public static string ReverseWords(string s)
+        {
+            string[] words = s.Split(' ')
+                .Where(word => !string.IsNullOrEmpty(word))
+                .ToArray();
+            Array.Reverse(words);
+            return string.Join(' ', words);
+        }
+
+        /// <summary>
+        /// 6. Zigzag Conversion
+        /// </summary>
+        public static string Convert(string s, int numRows)
+        {
+            if (numRows == 1) return s;
+            bool back = false;
+            int i = 0;
+            string[] arr = new string[numRows];
+            foreach (char c in s)
+            {
+                if (back)
+                {
+                    i--;
+                    arr[i] += c;
+                    if (i == 0)
+                    {
+                        i++;
+                        back = false;
+                    }
+                }
+                else
+                {
+                    arr[i] += c;
+                    if (i == numRows - 1)
+                    {
+                        i--;
+                        back = true;
+                    }
+                    i++;
+                }
+            }
+            return string.Join(string.Empty, arr);
+        }
+
+        /// <summary>
+        /// 68. Text Justification
+        /// </summary>
+        public static IList<string> FullJustify(string[] words, int maxWidth)
+        {
+            List<string> list = new List<string>();
+            int wordsCount = 0, wordsLength = 0, i = 0, start = 0, inputLength = words.Length;
+            bool foundRow = false;
+            while(start < inputLength)
+            {
+                if (!foundRow)
+                {
+                    if (i < inputLength && words[i].Length + wordsLength + (wordsCount - 1) < maxWidth)
+                    {
+                        wordsCount++;
+                        wordsLength += words[i].Length;
+                        i++;
+                    }
+                    else
+                    {
+                        start = i - wordsCount;
+                        foundRow = true;
+                    }
+                }
+                else
+                {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    int spaces = wordsCount - 1;
+                    int freespace = maxWidth - wordsLength;
+                    for (int j = 0; j < wordsCount; j++)
+                    {
+                        int padding = freespace;
+                        if(i == inputLength)
+                        {
+                            padding = spaces != 0 ? 1 : freespace;
+                        }
+                        else
+                        {
+                            padding = spaces == 0 ? freespace : ((freespace - 1) / spaces) + 1;
+                        }
+                        string newWord = words[start + j];
+                        stringBuilder.Append(newWord.PadRight(newWord.Length+padding));
+                        spaces--;
+                        freespace -= padding;
+                    }
+                    wordsCount = 0;
+                    wordsLength = 0;
+                    foundRow = false;
+                    list.Add(stringBuilder.ToString());
+                }
+            }
+            return list;
         }
 
         /// <summary>
@@ -574,7 +870,7 @@ namespace leetcode_playground
         /// </summary>
         public static bool IsSubsequence(string s, string t)
         {
-            if(s.Length > t.Length) return false;
+            if (s.Length > t.Length) return false;
             if (s.Length == 0) return true;
             int sCnt = 0;
             foreach (char c in t)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace leetcode_playground
 {
-    public class Binary_Search
+    public class BinarySearch
     {
 
         /// <summary>

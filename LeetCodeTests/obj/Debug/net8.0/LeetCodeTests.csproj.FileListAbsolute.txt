@@ -210,3 +210,5 @@ C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\LeetCodeTests\ob
 C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.pdb
 C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.genruntimeconfig.cache
 C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\LeetCodeTests\obj\Debug\net8.0\ref\LeetCodeTests.dll
+C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\bin\Debug\net8.0\Validation.dll
+C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\bin\Debug\net8.0\Xunit.SkippableFact.dll
