@@ -1,4 +1,4 @@
-﻿namespace leetcode_playground.HelperClasses
+﻿namespace leetcode_playground.Helpers.Classes
 {
     public class Node
     {

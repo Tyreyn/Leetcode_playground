@@ -1,26 +1,11 @@
 ﻿using leetcode_playground;
-using leetcode_playground.HelperClasses;
+using leetcode_playground.Helpers.Classes;
 
 namespace Solution
 {
 
     public static class Solution
     {
-        public static int LengthOfLastWord(string s)
-        {
-            string[] words = s.Split(' ').Where(x => !string.IsNullOrEmpty(x)).ToArray();
-            int length = words.Length;
-            int result = 0;
-            foreach (string word in words)
-            {
-                Console.WriteLine(word);
-            }
-            foreach (char c in words[length - 1])
-            {
-                result++;
-            }
-            return result;
-        }
 
         public static int SingleNumber(int[] nums)
         {
