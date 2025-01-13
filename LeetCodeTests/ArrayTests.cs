@@ -111,6 +111,14 @@ namespace LeetCodeTests
         }
 
         [Theory]
+        [InlineData(new int[] { 1, 0, 2 }, 5)]
+        [InlineData(new int[] {1,2,2}, 4)]
+        public void Candy(int[] input1, int expectedResult)
+        {
+            Assert.Equal(Arrays.Candy(input1), expectedResult);
+        }
+
+        [Theory]
         [InlineData(new string[] { "This", "is", "an", "example", "of", "text", "justification." },
             16,
             new string[] { "This    is    an", "example  of text", "justification.  " })]
