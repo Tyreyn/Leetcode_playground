@@ -92,7 +92,6 @@ C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\L
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.AssemblyInfo.cs
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.csproj.CoreCompileInputs.cache
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.sourcelink.json
-C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.csproj.CopyComplete
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.dll
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\refint\LeetCodeTests.dll
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCodeTests.pdb
@@ -212,3 +211,4 @@ C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\LeetCodeTests\ob
 C:\Users\athos\Documents\Visual Studio 2022\Leetcode_playground\LeetCodeTests\obj\Debug\net8.0\ref\LeetCodeTests.dll
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\bin\Debug\net8.0\Validation.dll
 C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\bin\Debug\net8.0\Xunit.SkippableFact.dll
+C:\Users\athos\source\repos\leetcode_playground\LeetCodeTests\obj\Debug\net8.0\LeetCode.E0F4A4AC.Up2Date

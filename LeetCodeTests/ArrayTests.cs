@@ -112,7 +112,7 @@ namespace LeetCodeTests
 
         [Theory]
         [InlineData(new int[] { 1, 0, 2 }, 5)]
-        [InlineData(new int[] {1,2,2}, 4)]
+        [InlineData(new int[] { 1, 2, 2 }, 4)]
         public void Candy(int[] input1, int expectedResult)
         {
             Assert.Equal(Arrays.Candy(input1), expectedResult);
@@ -127,10 +127,21 @@ namespace LeetCodeTests
             new string[] { "What   must   be", "acknowledgment  ", "shall be        " })]
         [InlineData(new string[] { "Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a", "computer.", "Art", "is", "everything", "else", "we", "do" },
             20,
-            new string[] { "Science  is  what we","understand      well","enough to explain to","a  computer.  Art is","everything  else  we","do                  " })]
+            new string[] { "Science  is  what we", "understand      well", "enough to explain to", "a  computer.  Art is", "everything  else  we", "do                  " })]
         public void FullJustify(string[] input1, int input2, string[] expectedResult)
         {
             Assert.Equal(expectedResult, Arrays.FullJustify(input1, input2));
+        }
+
+        [Theory]
+        [InlineData(new int[] { -1, 2, 1, -4 }, 1, 2)]
+        [InlineData(new int[] { 0, 0, 0 }, 1, 0)]
+        [InlineData(new int[] { 0, 1, 2 }, 3, 3)]
+        [InlineData(new int[] { 1,1,1,1 }, 0, 3)]
+        [InlineData(new int[] { 1, 1, 1, 0 }, -100, 2)]
+        public void ThreeSumClosest(int[] input1, int input2, int expectedResult)
+        {
+            Assert.Equal(expectedResult, Arrays.ThreeSumClosest(input1, input2));
         }
     }
 }

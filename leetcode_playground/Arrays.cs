@@ -915,6 +915,33 @@ namespace leetcode_playground
                 ans += candy;
             }
             return ans;
-        }   
+        }
+
+        /// <summary>
+        /// 16. 3Sum Closest
+        /// </summary>
+        public static int ThreeSumClosest(int[] nums, int target)
+        {
+            int closestSum = Int16.MaxValue;
+            int minDiff = Int16.MaxValue;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    for (int k = j + 1; k < nums.Length; k++)
+                    {
+                        int currSum = nums[i] + nums[j] + nums[k];
+                        int currDiff = Math.Abs(currSum - target);
+
+                        if (currDiff < minDiff)
+                        {
+                            closestSum = currSum;
+                            minDiff = currDiff; ;
+                        }
+                    }
+                }
+            }
+            return closestSum;
+        }
     }
 }

@@ -1044,7 +1044,10 @@
       },
       "leetcode_playground/1.0.0": {
         "runtime": {
-          "leetcode_playground.dll": {}
+          "leetcode_playground.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

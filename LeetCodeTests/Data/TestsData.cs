@@ -1,4 +1,5 @@
-﻿using System;
+﻿using leetcode_playground.Helpers.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,74 @@ namespace LeetCodeTests.Data
 {
     public static class TestsData
     {
+
+        public static IEnumerable<object[]> TD_HasCycle()
+        {
+            ListNode tmp1 = new ListNode(2);
+            ListNode tmp2 = new ListNode(1);
+            yield return new object[]
+            {
+                new ListNode(3, tmp1.next = new ListNode(0, new ListNode(-4, tmp1))),
+                true,
+            };
+            yield return new object[]
+            {
+                tmp2.next = new ListNode(2, tmp2),
+                true,
+            };
+            yield return new object[]
+            {
+                new ListNode(1),
+                false,
+            };
+        }
+
+        public static IEnumerable<object[]> TD_SwapPairs()
+        {
+            yield return new object[]
+            {
+                new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4)))),
+                new int[] {2,1,4,3},
+            };
+            yield return new object[]
+            {
+                new ListNode(),
+                new int[] {},
+            };
+            yield return new object[]
+            {
+                new ListNode(1),
+                new int[] {1},
+            };
+            yield return new object[]
+            {
+                new ListNode(1, new ListNode(2, new ListNode(3))),
+                new int[] {2,1,3},
+            };
+        }
+
+        public static IEnumerable<object[]> TD_RemoveElements()
+        {
+            yield return new object[]
+            {
+                new ListNode(1, new ListNode(2, new ListNode(6, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6))))))),
+                6,
+                new int[] {1,2,3,4,5},
+            };
+            yield return new object[]
+            {
+                new ListNode(),
+                1,
+                new int[] {},
+            };
+            yield return new object[]
+            {
+                new ListNode(7, new ListNode(7, new ListNode(7, new ListNode(7, new ListNode(7))))),
+                7,
+                new int[] {},
+            };
+        }
+
         public static IEnumerable<object[]> TD_GroupAnagrams()
         {
             yield return new object[]
